@@ -16,7 +16,6 @@ class TokenAuthenticate
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
         if($request->header('Authorization') && $request->header('Authorization') == 'thisisforcreatedtoken'){
             return $next($request);
         }
