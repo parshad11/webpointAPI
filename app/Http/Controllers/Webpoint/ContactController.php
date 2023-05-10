@@ -53,5 +53,13 @@ class ContactController extends Controller
         }
         return WebpointHelpers::errorResponse(422  , 'Some issue occured while deleting Contract list.');
     }
+
+    public function getRandomQuotes(){
+        $quoteCOllection = WebpointHelpers::getQuote();
+        if(count($quoteCOllection)){
+            return WebpointHelpers::successResponse(200 , $quoteCOllection , 'Quote has been fetched successfully');
+        }
+        return WebpointHelpers::errorResponse(204  , '');
+    }
     
 }

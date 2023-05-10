@@ -108,6 +108,13 @@ return [
 
     'faker_locale' => 'en_US',
 
+    // quote api url config
+    
+    'quotes_api' => env('QUOTES_API','https://api.kanye.rest/'),
+
+    //token adder
+    'token' => env('TOKEN'),
+
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
@@ -133,6 +140,8 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
+
+
 
     'providers' => [
 

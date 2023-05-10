@@ -11,4 +11,5 @@ Route::group([
     Route::post('add-contact', 'ContactController@addContact');
     Route::post('edit-contact', 'ContactController@editContact');
     Route::delete('delete-contact', 'ContactController@deleteContact');
+    Route::get('get-random-quotes','ContactController@getRandomQuotes');
 });
