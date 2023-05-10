@@ -16,7 +16,7 @@ class TokenAuthenticate
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->header('Authorization') && $request->header('Authorization') == 'thisisforcreatedtoken'){
+        if($request->header('Authorization') && $request->header('Authorization') == 'Bearer thisistherequiredtoken'){
             return $next($request);
         }
         dd('Please add the token first');
